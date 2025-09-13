@@ -50,6 +50,16 @@ jobs:
       pages: write
       id-token: write
     steps:
+      - name: Download built artifact (diagnostic)
+        uses: actions/download-artifact@v3
+        with:
+          path: pages-out
+
+      - name: List artifact contents (diagnostic)
+        run: |
+          echo "Listing pages-out contents"
+          ls -la pages-out || true
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
