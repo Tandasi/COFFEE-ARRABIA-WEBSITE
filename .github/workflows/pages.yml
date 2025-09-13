@@ -31,10 +31,8 @@ jobs:
         run: npm ci
 
       - name: Build client
-        env:
-          NODE_ENV: production
         run: |
-          npm run build
+          npm run build:client
           mkdir -p pages-out
           cp -r dist/public/* pages-out/
 
