@@ -6,6 +6,19 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Diagnostic: log environment early
+log(`process.env.NODE_ENV=${process.env.NODE_ENV} app.get('env')=${app.get('env')}`);
+
+// Temporary health + root test routes (will be overridden by Vite catch-all in dev)
+app.get('/health', (_req, res) => {
+  res.json({ ok: true, env: app.get('env') });
+});
+app.get('/', (_req, res, next) => {
+  // Let Vite catch-all handle in dev; just mark we passed here if not replaced
+  res.setHeader('X-Root-Handler', 'express-root');
+  next();
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -61,11 +74,7 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || '5000', 10);
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
+  server.listen(port, "0.0.0.0", () => {
     log(`serving on port ${port}`);
   });
 })();

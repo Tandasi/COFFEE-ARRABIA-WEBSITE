@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qahwa Authentica - Traditional Saudi Coffee House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'coffee': '#8B4513',
+                    'gold': '#D4AF37',
+                    'cream': '#F5F5DC',
+                    'sandy': '#DEB887',
+                    'burgundy': '#800020',
+                    'amber': '#FFBF00',
+                    'ivory': '#FFFEF7'
+                },
+                fontFamily: {
+                    'arabic': ['Amiri', 'serif'],
+                    'display': ['Playfair Display', 'serif'],
+                    'body': ['Open Sans', 'sans-serif']
+                }
+            }
+        }
+    };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-body bg-ivory text-coffee">
+    
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed top-0 w-full bg-ivory/95 backdrop-blur-sm shadow-lg z-50 border-b-2 border-gold/20">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-coffee to-burgundy rounded-full flex items-center justify-center">
+                        <i class="fas fa-coffee text-cream text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-display text-2xl font-bold text-coffee">Qahwa Authentica</h1>
+                        <p class="text-sm text-coffee/70 font-arabic">قهوة أصيلة</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-coffee hover:text-gold transition-colors font-medium">Home</a>
+                    <a href="#menu" class="text-coffee hover:text-gold transition-colors font-medium">Menu</a>
+                    <a href="#about" class="text-coffee hover:text-gold transition-colors font-medium">About</a>
+                    <a href="#gallery" class="text-coffee hover:text-gold transition-colors font-medium">Gallery</a>
+                    <a href="#contact" class="text-coffee hover:text-gold transition-colors font-medium">Contact</a>
+                </div>
+                <button class="md:hidden text-coffee">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-coffee/90 to-burgundy/90">
+        <!-- Traditional Arabic coffee service ceremony -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+             style="background-image: url('https://pixabay.com/get/g3b92d2f0ff72237dc32da244212bdc60ad73346f14a2d1262b47e8071b35a91d659d5f5ba865a25707062524943cb040f63dc4f37f2b95fcb0b45a3d2ceb1ed0_1280.jpg');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-coffee/80 to-burgundy/70"></div>
+        
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <div class="mb-8">
+                <div class="w-24 h-24 bg-gradient-to-br from-gold to-amber rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                    <i class="fas fa-coffee text-coffee text-3xl"></i>
+                </div>
+                <h1 class="font-display text-5xl md:text-7xl font-bold text-cream mb-4 leading-tight">
+                    Welcome to<br>
+                    <span class="text-gold">Qahwa Authentica</span>
+                </h1>
+                <p class="font-arabic text-2xl text-gold/90 mb-6">قهوة أصيلة - أصالة في كل رشفة</p>
+                <p class="text-xl md:text-2xl text-cream/90 font-light leading-relaxed max-w-2xl mx-auto">
+                    Experience the rich tradition of Saudi Arabian coffee culture in our authentic coffeehouse, 
+                    where every cup tells a story of heritage and hospitality.
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#menu" class="bg-gold hover:bg-amber text-coffee px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <i class="fas fa-scroll mr-2"></i>
+                    View Our Menu
+                </a>
+                <a href="#about" class="border-2 border-cream text-cream hover:bg-cream hover:text-coffee px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300">
+                    <i class="fas fa-book-open mr-2"></i>
+                    Our Story
+                </a>
+            </div>
+        </div>
+
+        <!-- Decorative Arabic Pattern -->
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-ivory to-transparent"></div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-20 bg-ivory">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-coffee mb-4">Our Heritage</h2>
+                <p class="font-arabic text-xl text-gold">تراثنا العريق</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-gold to-amber mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div>
+                    <!-- Modern coffee shop interior with traditional elements -->
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Traditional Saudi coffee setup" 
+                         class="rounded-2xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="space-y-6">
+                    <h3 class="font-display text-3xl font-semibold text-coffee mb-6">A Tradition Preserved</h3>
+                    <p class="text-lg text-coffee/80 leading-relaxed">
+                        Since 1985, Qahwa Authentica has been the heart of traditional Saudi coffee culture in Riyadh. 
+                        Our family-owned establishment honors the ancient art of Arabic coffee preparation, passed down through generations.
+                    </p>
+                    <p class="text-lg text-coffee/80 leading-relaxed">
+                        We source our premium coffee beans from the finest regions, roasting them using time-honored techniques 
+                        that bring out the rich, complex flavors that define authentic Saudi qahwa.
+                    </p>
+                    <div class="flex items-center space-x-4 pt-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-gold to-amber rounded-full flex items-center justify-center">
+                            <i class="fas fa-award text-coffee text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-coffee text-lg">Award Winning</h4>
+                            <p class="text-coffee/70">Best Traditional Coffee House 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Menu Section -->
+    <section id="menu" class="py-20 bg-gradient-to-br from-sandy/30 to-cream/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-coffee mb-4">Our Menu</h2>
+                <p class="font-arabic text-xl text-gold">قائمة الطعام</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-gold to-amber mx-auto mt-6"></div>
+                <p class="text-lg text-coffee/70 mt-6 max-w-2xl mx-auto">
+                    Authentic Saudi flavors and traditional beverages, crafted with love and served with pride
+                </p>
+            </div>
+
+            <!-- Menu Categories -->
+            <div class="max-w-6xl mx-auto">
+                
+                <!-- Hot Drinks -->
+                <div class="mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="font-display text-3xl font-semibold text-coffee mb-2">Hot Beverages</h3>
+                        <p class="font-arabic text-lg text-gold">المشروبات الساخنة</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- @MAP: hotDrinks.map(drink => ( -->
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Arabic Coffee (Qahwa)</h4>
+                                <span class="text-gold font-bold text-lg">25 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Traditional Saudi coffee with cardamom and saffron</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Turkish Coffee</h4>
+                                <span class="text-gold font-bold text-lg">22 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Rich and strong, prepared in traditional copper pot</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Karak Chai</h4>
+                                <span class="text-gold font-bold text-lg">18 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Spiced tea with milk, cardamom, and ginger</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Maghrebi Mint Tea</h4>
+                                <span class="text-gold font-bold text-lg">16 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Refreshing green tea with fresh mint leaves</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Hot Chocolate</h4>
+                                <span class="text-gold font-bold text-lg">20 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Rich Belgian chocolate with rose water</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Espresso</h4>
+                                <span class="text-gold font-bold text-lg">15 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Premium Italian espresso blend</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                </div>
+
+                <!-- Cold Drinks -->
+                <div class="mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="font-display text-3xl font-semibold text-coffee mb-2">Cold Beverages</h3>
+                        <p class="font-arabic text-lg text-gold">المشروبات الباردة</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Iced Arabic Coffee</h4>
+                                <span class="text-gold font-bold text-lg">28 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Chilled qahwa with cardamom and rose water</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Frappe</h4>
+                                <span class="text-gold font-bold text-lg">25 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Blended iced coffee with whipped cream</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Lemonade</h4>
+                                <span class="text-gold font-bold text-lg">12 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Fresh squeezed lemons with mint</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food & Pastries -->
+                <div class="mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="font-display text-3xl font-semibold text-coffee mb-2">Traditional Pastries & Food</h3>
+                        <p class="font-arabic text-lg text-gold">الحلويات والمأكولات التقليدية</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Ma'amoul Cookies</h4>
+                                <span class="text-gold font-bold text-lg">35 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Traditional date-filled semolina cookies (6 pieces)</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Baklava Assortment</h4>
+                                <span class="text-gold font-bold text-lg">45 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Honey-soaked phyllo pastries with nuts (8 pieces)</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Dates & Nuts Platter</h4>
+                                <span class="text-gold font-bold text-lg">40 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Premium Medjool dates with mixed nuts</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Kunafa</h4>
+                                <span class="text-gold font-bold text-lg">38 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Crispy cheese pastry with rose syrup</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Arabic Bread & Hummus</h4>
+                                <span class="text-gold font-bold text-lg">22 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Freshly baked pita with traditional hummus</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-ivory rounded-xl shadow-lg p-6 border-l-4 border-gold hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="font-semibold text-lg text-coffee">Halwa Selection</h4>
+                                <span class="text-gold font-bold text-lg">32 SAR</span>
+                            </div>
+                            <p class="text-coffee/70 text-sm mb-2">Traditional Middle Eastern sweets (4 pieces)</p>
+                            <div class="text-amber text-xs">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Menu Section -->
+
+    <!-- @COMPONENT: Gallery Section -->
+    <section id="gallery" class="py-20 bg-ivory">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-coffee mb-4">Our Gallery</h2>
+                <p class="font-arabic text-xl text-gold">معرض الصور</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-gold to-amber mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                <!-- Traditional Arabic coffee preparation in ornate golden pot -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                         alt="Traditional Arabic coffee service" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Elegant coffee shop interior with Middle Eastern decor -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                         alt="Coffee shop interior" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Assorted Middle Eastern pastries and desserts on decorative plates -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://pixabay.com/get/gf4249ac2eccca7066eac80d97a0468c4bce775c2fd1f85e2f5b1bd419293d7ee267a6a3a9d50e7a49ab4dd83f0903c6f4f233cefb9eb2e5d7e9caf66314bd9e0_1280.jpg" 
+                         alt="Middle Eastern pastries" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Traditional Saudi coffee ceremony with dates -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                         alt="Saudi coffee service" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Warm coffee shop ambiance with traditional seating -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                         alt="Traditional coffee shop seating" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Beautiful Arabic coffee beans and traditional grinding tools -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                         alt="Coffee beans and grinding tools" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Delicate Middle Eastern sweets and confections -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1587736756230-2ba3c4af9d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                         alt="Middle Eastern sweets" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+
+                <!-- Cozy coffee corner with traditional Arabic hospitality setup -->
+                <div class="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                         alt="Coffee corner setup" 
+                         class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-coffee/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Gallery Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-coffee to-burgundy text-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-cream mb-4">Visit Us</h2>
+                <p class="font-arabic text-xl text-gold">قم بزيارتنا</p>
+                <div class="w-24 h-1 bg-gradient-to-r from-gold to-amber mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-display text-2xl font-semibold mb-6 text-gold">Location & Hours</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-gold"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-cream">Address</h4>
+                                    <p class="text-cream/80">123 Al-Olaya Street, Riyadh 12313<br>Kingdom of Saudi Arabia</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-clock text-gold"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-cream">Opening Hours</h4>
+                                    <p class="text-cream/80">
+                                        Saturday - Thursday: 6:00 AM - 12:00 AM<br>
+                                        Friday: 2:00 PM - 12:00 AM
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-gold"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-cream">Phone</h4>
+                                    <p class="text-cream/80">+966 11 123 4567</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-gold"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-cream">Email</h4>
+                                    <p class="text-cream/80">info@qahwaauthentica.sa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-display text-2xl font-semibold mb-6 text-gold">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold hover:text-coffee transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold hover:text-coffee transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold hover:text-coffee transition-colors">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center hover:bg-gold hover:text-coffee transition-colors">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-cream/10 rounded-2xl p-8 backdrop-blur-sm">
+                    <h3 class="font-display text-2xl font-semibold mb-6 text-gold">Reserve Your Table</h3>
+                    <form class="space-y-4">
+                        <!-- TODO: Implement form submission logic -->
+                        <div>
+                            <label class="block text-cream/80 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 bg-ivory/20 border border-gold/30 rounded-lg text-cream placeholder-cream/60 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold" placeholder="Your full name">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-cream/80 mb-2">Date</label>
+                                <input type="date" class="w-full px-4 py-3 bg-ivory/20 border border-gold/30 rounded-lg text-cream focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold">
+                            </div>
+                            <div>
+                                <label class="block text-cream/80 mb-2">Time</label>
+                                <input type="time" class="w-full px-4 py-3 bg-ivory/20 border border-gold/30 rounded-lg text-cream focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-cream/80 mb-2">Guests</label>
+                            <select class="w-full px-4 py-3 bg-ivory/20 border border-gold/30 rounded-lg text-cream focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold">
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3-4 Guests</option>
+                                <option>5+ Guests</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-cream/80 mb-2">Special Requests</label>
+                            <textarea rows="3" class="w-full px-4 py-3 bg-ivory/20 border border-gold/30 rounded-lg text-cream placeholder-cream/60 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold" placeholder="Any special requests or dietary requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gold hover:bg-amber text-coffee px-6 py-3 rounded-lg font-semibold transition-colors">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Make Reservation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-coffee text-cream py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-4 mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gold to-amber rounded-full flex items-center justify-center">
+                        <i class="fas fa-coffee text-coffee text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-3xl font-bold text-gold">Qahwa Authentica</h3>
+                        <p class="font-arabic text-lg text-cream/80">قهوة أصيلة</p>
+                    </div>
+                </div>
+                
+                <p class="text-cream/70 mb-6 max-w-2xl mx-auto">
+                    Experience the authentic taste of Saudi Arabian coffee culture, 
+                    where tradition meets excellence in every cup.
+                </p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#home" class="text-cream/70 hover:text-gold transition-colors">Home</a>
+                    <a href="#menu" class="text-cream/70 hover:text-gold transition-colors">Menu</a>
+                    <a href="#about" class="text-cream/70 hover:text-gold transition-colors">About</a>
+                    <a href="#gallery" class="text-cream/70 hover:text-gold transition-colors">Gallery</a>
+                    <a href="#contact" class="text-cream/70 hover:text-gold transition-colors">Contact</a>
+                </div>
+                
+                <div class="border-t border-cream/20 pt-8">
+                    <p class="text-cream/60">
+                        © 2024 Qahwa Authentica. All rights reserved. | 
+                        <span class="font-arabic">جميع الحقوق محفوظة</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+    (function() {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.querySelector('.md\\:hidden button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                // TODO: Implement mobile menu toggle functionality
+                console.log('Mobile menu toggle clicked');
+            });
+        }
+
+        // Form submission handling
+        const reservationForm = document.querySelector('form');
+        if (reservationForm) {
+            reservationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // TODO: Implement reservation form submission logic
+                alert('Reservation request submitted! We will contact you shortly to confirm.');
+            });
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-ivory', 'shadow-lg');
+                navbar.classList.remove('bg-ivory/95');
+            } else {
+                navbar.classList.remove('bg-ivory', 'shadow-lg');
+                navbar.classList.add('bg-ivory/95');
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

@@ -42,6 +42,7 @@ export async function setupVite(app: Express, server: Server) {
 
   app.use(vite.middlewares);
   app.use("*", async (req, res, next) => {
+    log(`[VITE CATCH-ALL] ${req.method} ${req.originalUrl}`);
     const url = req.originalUrl;
 
     try {
@@ -68,7 +69,8 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  const distPath = path.resolve(import.meta.dirname, "public");
+  // Use process.cwd() so we can run the built server from project root and reliably locate assets
+  const distPath = path.resolve(process.cwd(), "dist", "public");
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
