@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development tsx server/index.ts",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+  "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+  "build:client": "cross-env VITE_BASE=/COFFEE-ARRABIA-WEBSITE/ vite build",
   "start": "cross-env NODE_ENV=production node dist/index.js",
   "start:port": "cross-env NODE_ENV=production PORT=5173 node dist/index.js",
     "check": "tsc",

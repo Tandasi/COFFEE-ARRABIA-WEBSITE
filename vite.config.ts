@@ -3,7 +3,11 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")?.[1];
+const baseFromEnv = process.env.VITE_BASE || (process.env.GITHUB_ACTIONS && repoName ? `/${repoName}/` : "/");
+
 export default defineConfig({
+  base: baseFromEnv,
   plugins: [
     react(),
     runtimeErrorOverlay(),
