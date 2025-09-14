@@ -77,17 +77,41 @@ jobs:
   gh-pages-fallback:
     needs: build
     runs-on: ubuntu-latest
-    if: ${{ secrets.GH_PAGES_PAT != '' }}
+    env:
+      GH_PAGES_PAT: ${{ secrets.GH_PAGES_PAT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check GH_PAGES_PAT secret
+        id: check-secret
+        run: |
+          # Print a tiny diagnostic (do not print the secret itself)
+          if [ -z "${GH_PAGES_PAT:-}" ]; then
+            echo "pat_present=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "pat_present=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Skip fallback if GH_PAGES_PAT not set
+        if: steps.check-secret.outputs.pat_present == 'false'
+        run: |
+          echo "GH_PAGES_PAT secret not set; skipping fallback job"
+
+      - name: Download Pages artifact
+        if: steps.check-secret.outputs.pat_present == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: pages-out
+
       - name: Prepare git
+        if: steps.check-secret.outputs.pat_present == 'true'
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy to gh-pages (fallback, uses GH_PAGES_PAT)
+        if: steps.check-secret.outputs.pat_present == 'true'
         env:
           REPO: ${{ github.repository }}
           PAT: ${{ secrets.GH_PAGES_PAT }}
